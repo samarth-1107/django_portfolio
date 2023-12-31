@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Home{%endblock%}
+{%block content%}
+
+<body>
+    <section id="home">
+
+        <body class="container">
+            <p>My name is {{about_section_details.firstName}} {{about_section_details.lastName}}.</p>
+            &nbsp;
+            <p>My age is {{about_section_details.age}}.</p>
+        </body>
+    </section>
+    <section id="about">
+
+        <body class="container">
+            <p>I provide following services :
+                {{services_section_details.service_1}}
+                {{services_section_details.service_2}}
+            </p>
+        </body>
+    </section>
+</body>
+{%endblock%}
