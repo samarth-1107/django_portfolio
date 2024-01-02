@@ -1,24 +1,69 @@
 {% extends 'base.html' %}
-{% block title %}Home{%endblock%}
+{% block title %}Samarth Subhash CHitley{%endblock%}
 {%block content%}
 
 <body>
     <section id="home">
-
-        <body class="container">
-            <p>My name is {{about_section_details.firstName}} {{about_section_details.lastName}}.</p>
-            &nbsp;
-            <p>My age is {{about_section_details.age}}.</p>
-        </body>
+        <h3>HOME</h3>
     </section>
     <section id="about">
-
-        <body class="container">
-            <p>I provide following services :
-                {{services_section_details.service_1}}
-                {{services_section_details.service_2}}
-            </p>
-        </body>
+        <div class="container">
+            <h3 class="text-center">ABOUT</h3>
+            {% for about in about_section_details %}
+            <p>{{about.first_paragraph}}</p>
+            &nbsp;
+            <br>
+            <p>{{about.second_paragraph}}.</p>
+            {% endfor %}
+        </div>
     </section>
+    <section id="services">
+        <div class="container">
+            <h3 class="text-center">SERVICES</h3>
+            <p>
+                {% for services in services_section_details %}
+                <i class='{{services.icon}}'></i>
+                <br>
+                {{services.title}}
+                <br>
+                {{services.descreption}}
+                {% endfor %}
+            </p>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h3 class="text-center">SKILLS</h3>
+        </div>
+    </section>
+    <section id="projects">
+        <h3 class="text-center">PROJECTS</h3>
+        <div class="container d-flex justify-content-evenly flex-wrap">
+            {% for project in project_section_details %}
+            <div class="card m-3 shadow" style="width: 22rem;">
+                <a href={{project.project_link}}><img src="media/{{project.project_image}}" class="card-img-top shadow"
+                        alt="..."></a>
+            </div>
+
+            {% endfor %}
+        </div>
+    </section>
+    <section id="contact">
+        <h3 class="text-center">GET IN TOUCH</h3>
+        <div class="container d-flex justify-content-between">
+            <div class="container d-flex justify-content-between  flex-column">
+                {% for detail in contact_section_details %}
+                <div class="container d-flex align-items-baseline">
+                    <i class="{{detail.info_icon}}"></i>
+                    <p class="m-2">{{detail.description}}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="container">
+                <h3>CONTACT FORM</h3>
+            </div>
+        </div>
+    </section>
+
 </body>
 {%endblock%}
