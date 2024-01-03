@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}Samarth Subhash CHitley{%endblock%}
+{% load crispy_forms_tags %}
 {%block content%}
 
 <body>
@@ -51,7 +52,7 @@
     <section id="contact">
         <h3 class="text-center">GET IN TOUCH</h3>
         <div class="container d-flex justify-content-between">
-            <div class="container d-flex justify-content-between  flex-column">
+            <div class="container d-flex justify-content-center  flex-column">
                 {% for detail in contact_section_details %}
                 <div class="container d-flex align-items-baseline">
                     <i class="{{detail.info_icon}}"></i>
@@ -60,7 +61,15 @@
                 {% endfor %}
             </div>
             <div class="container">
-                <h3>CONTACT FORM</h3>
+                <div class="container bg-light shadow-medium p-3 form-layout">
+                    <form action="" method="POST" autocomplete="off">
+                        {% csrf_token %}
+                        {{contact_form|crispy}}
+                        <button type="submit" class="btn btn-primary w-100 btn-block p-2">
+                            Submit
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>

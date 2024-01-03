@@ -27,3 +27,11 @@ class ContactSectionDetail(models.Model):
     description = models.CharField(max_length=100)
     def __str__(self):
         return self.personal_info
+    
+class ContactForm(models.Model):
+    full_name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=200)
+    phone_number =models.CharField(max_length=100)
+    description = models.CharField(max_length=350)
+    def __str__(self):
+        return self.full_name
