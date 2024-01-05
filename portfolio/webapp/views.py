@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import AboutSectionDetail, ServiceSectionDetail,ProjectSectionDetail,ContactSectionDetail,ContactForm
+from .models import AboutSectionDetail, ServiceSectionDetail,ProjectSectionDetail,ContactSectionDetail, PersonalLinks
 from .forms import CreateContact
 
 def index(request):
+
+    personal_links = PersonalLinks.objects.all()
     about_section_details = AboutSectionDetail.objects.all()
     services_section_details = ServiceSectionDetail.objects.all()
     project_section_details = ProjectSectionDetail.objects.all()
@@ -16,6 +18,7 @@ def index(request):
             return redirect('')
 
     context = {
+        'personal_links':personal_links,
         'about_section_details':about_section_details,
         'services_section_details':services_section_details,
         'project_section_details':project_section_details,

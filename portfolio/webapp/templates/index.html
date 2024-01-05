@@ -7,6 +7,8 @@
     <section id="home">
         <h3>HOME</h3>
     </section>
+
+
     <section id="about">
         <div class="container">
             <h3 class="text-center">ABOUT</h3>
@@ -19,19 +21,29 @@
         </div>
     </section>
     <section id="services">
-        <div class="container">
-            <h3 class="text-center">SERVICES</h3>
-            <p>
-                {% for services in services_section_details %}
-                <i class='{{services.icon}}'></i>
-                <br>
-                {{services.title}}
-                <br>
-                {{services.descreption}}
-                {% endfor %}
-            </p>
+        <h3 class="text-center">SERVICES</h3>
+        <div class="d-flex justify-content-evenly flex-wrap">
+            {% for services in services_section_details %}
+            <div class="flip-card m-3">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front d-flex">
+                        <i class='{{services.icon}} icon-size'></i>
+                        <span class="service-tag">{{services.title|upper}}</span>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>{{services.descreption}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </section>
+
+
+
+
+
     <section id="skills">
         <div class="container">
             <h3 class="text-center">SKILLS</h3>

@@ -35,3 +35,10 @@ class ContactForm(models.Model):
     description = models.CharField(max_length=350)
     def __str__(self):
         return self.full_name
+    
+class PersonalLinks(models.Model) : 
+    link_name = models.CharField(max_length=15)
+    personal_link_icon = models.CharField(max_length = 20)
+    personal_links = models.CharField(max_length=50)
+    def __str__(self):
+        return self.link_name
