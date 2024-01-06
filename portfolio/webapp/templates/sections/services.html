@@ -1,0 +1,19 @@
+<section id="services">
+    <h1 class="text-center m-5">SERVICES</h1>
+    <div class="d-flex justify-content-evenly flex-wrap">
+        {% for services in services_section_details %}
+        <div class="flip-card m-3">
+            <div class="flip-card-inner">
+                <div class="flip-card-front d-flex">
+                    <i class='{{services.icon}}' style="font-size:35px"></i>
+                    <span class="service-tag">{{services.title|upper}}</span>
+                </div>
+                <div class="flip-card-back">
+                    <p>{{services.descreption}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

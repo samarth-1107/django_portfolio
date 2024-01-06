@@ -1,0 +1,32 @@
+<h1 class="text-center mt-5">ABOUT</h1>
+<section id="about">
+    <div class="container">
+        <div class="row justify-content-between">
+            {% for about in about_section_details %}
+            <div class="col-lg-4 ">
+                <div class="div-img-bg">
+                    <div class="about-img">
+                        <img src="media/{{about.about_image}}" class="img-responsive" alt="My picture">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="about-descr">
+                    <p class="p-heading">{{about.first_paragraph}}</p>
+                    <hr>
+                    <br>
+                    <p class="separator">{{about.second_paragraph}}</p>
+                    <hr>
+                    <a class="res-btn" href="media/{{about.resume}}" download="Samarth_Resume">
+                        <p class="resume"><i class='{{about.resume_icon}}'
+                                style="font-size:35px;color: rgb(179 155 123);"></i>
+                            <p class="resume-p">RESEUME</p>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

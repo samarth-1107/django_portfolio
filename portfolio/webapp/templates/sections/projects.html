@@ -1,0 +1,14 @@
+<section id="projects">
+    <h1 class="text-center">PROJECTS</h1>
+    <div id="my-projects" class="my-work">
+        <div class="d-flex justify-content-evenly flex-wrap">
+            {% for project in project_section_details %}
+            <div class="card card-img-top" style="width: 23rem;">
+                <a class="template-links" href={{project.project_link}}><img src="media/{{project.project_image}}"
+                        class="card-img-top" alt="...">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

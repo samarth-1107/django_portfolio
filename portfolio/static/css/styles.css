@@ -3,6 +3,30 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background: #ffffff;
+    color: #898989;
+    font-family: 'Poppins', helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* .navbar {
+    height: 75px;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    transition: top 0.3s;
+} */
+
 .nav-list li {
     list-style: none;
 }
@@ -89,10 +113,6 @@ span.typed {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
-
-.icon-size {
-    size: 1rem;
 }
 
 .flip-card-front {
@@ -523,7 +543,7 @@ nav ul li a {
 
 /*PROJECTS*/
 #projects {
-    background: url('../img/project-section.jpg');
+    background: url('/media/images/project-section.jpg');
     background-position: center;
     background-attachment: fixed;
 }

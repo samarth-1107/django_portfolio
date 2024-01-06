@@ -5,6 +5,7 @@ class AboutSectionDetail(models.Model):
     second_paragraph = models.CharField(max_length=500)
     about_image = models.ImageField(upload_to="images/", null=True, default=None)
     resume = models.FileField(upload_to ='uploads/', null=True, default=None)
+    resume_icon = models.CharField(max_length=20, default='')
 
 class ServiceSectionDetail(models.Model):
     icon = models.CharField(max_length=500)
@@ -13,6 +14,12 @@ class ServiceSectionDetail(models.Model):
 
     def __str__(self):
         return self.title
+    
+class SkillsSectionDetails(models.Model):
+    skill_name = models.CharField(max_length=20, default= None)
+    skill_image = models.ImageField(upload_to="images/", null=True, default=None)
+    def __str__(self):
+        return self.skill_name
     
 class ProjectSectionDetail(models.Model):
     project_name = models.CharField(max_length=100, default= None)
