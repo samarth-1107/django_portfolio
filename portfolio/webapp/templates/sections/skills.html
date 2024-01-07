@@ -1,7 +1,12 @@
 <section id="skills">
-    <h1 class="text-center">SKILLS</h1>
+    <h1 class="text-center m-5">SKILLS</h1>
     <div class="slider">
         <div class="slide-track">
+            {% for skill in skills_section_details %}
+            <div class="slide">
+                <img src="media/{{skill.skill_image}}" alt="" />
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

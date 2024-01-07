@@ -143,21 +143,6 @@ span.typed {
 }
 
 /* END FLIPCARD */
-.iconify {
-    height: 45px;
-    width: 45px;
-    color: rgb(179 155 123);
-}
-
-.white-icon {
-    color: rgba(255, 255, 255, 0.685);
-}
-
-.white-icon:hover {
-    color: white;
-    transition: 0.3s;
-}
-
 #skills {
     padding: 50px;
     height: 70vh;
@@ -404,7 +389,7 @@ nav ul li a {
 
 /* # Hero */
 #hero {
-    background: url("../img/home-bg.png") repeat scroll center center/cover;
+    background: url('/media/images/home-bg.png') repeat scroll center center/cover;
     height: 100vh;
     width: 100%;
     background-attachment: fixed;
@@ -422,7 +407,7 @@ nav ul li a {
 
 .hero-content h1 {
     font-family: 'Dancing Script', cursive;
-    font-weight: bold;
+    font-weight: lighter;
     color: #fff;
     font-size: 70px;
 }
