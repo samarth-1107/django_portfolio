@@ -1,19 +1,22 @@
 <section id="home">
     <div id="hero" class="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>I'm a <span class="txt-rotate" data-period="2000"
-                        data-rotate='["Web Developer", "Blogger", "Freelancer"]' style="color: #b88d30;"></span></h1>
-                <p class="typed-items" data-typed-person=""> Software Enginner, Web Developer,
-                    Blogger</p>
-                <div class="container social-and-btn">
-                    <ul class="list-unstyled list-social">
-                        {% for info in personal_links %}
-                        <li><a href="{{info.personal_links}}"><i class='{{info.personal_link_icon}}'
-                                    style="font-size:35px"></i></a></li>
-                        {% endfor %}
-                    </ul>
-                    <a href="#contact" id="hire-btn" class="hirebtn">HIRE ME</a>
+        <div class="overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>I'm a <span class="txt-rotate " data-period="2000"
+                            data-rotate='["Web Developer", "Blogger", "Freelancer"]' style="color: #b88d30;"></span>
+                    </h1>
+                    <p class="typed-items" data-typed-person=""> Software Enginner, Web Developer,
+                        Blogger</p>
+                    <div class="container social-and-btn">
+                        <ul class="list-unstyled list-social">
+                            {% for info in personal_links %}
+                            <li><a href="{{info.personal_links}}"><i class='{{info.personal_link_icon}}'
+                                        style="font-size:35px"></i></a></li>
+                            {% endfor %}
+                        </ul>
+                        <a href="#contact" id="hire-btn" class="hirebtn">HIRE ME</a>
+                    </div>
                 </div>
             </div>
         </div>

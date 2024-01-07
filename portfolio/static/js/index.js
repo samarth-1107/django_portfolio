@@ -56,5 +56,12 @@ window.onload = function () {
 };
 
 function scrollFunction() {
-    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? document.getElementById("navigation-bar").style.top = "0" : document.getElementById("navigation-bar").style.top = "-140px"
+    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ? document.getElementById("navigation-bar").style.top = "0" : document.getElementById("navigation-bar").style.top = "-180px"
 }
+burger = document.querySelector(".burger"), navbar = document.querySelector(".navbar"), navlist = document.querySelector(".nav-list"), burger.addEventListener("click", () => {
+    navbar.classList.toggle("h-nav-resp"), navlist.classList.toggle("v-class-resp")
+}), navlist.addEventListener("click", () => {
+    navbar.classList.toggle("h-nav-resp"), navlist.classList.toggle("v-class-resp")
+}), window.onscroll = function () {
+    scrollFunction()
+};

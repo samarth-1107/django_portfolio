@@ -1,4 +1,3 @@
-/* PURCHASE THE TEMPLATE FOR DESCRIPTIVE CSS */
 html {
     scroll-behavior: smooth;
 }
@@ -19,13 +18,13 @@ body {
     box-sizing: border-box;
 }
 
-/* .navbar {
+.navbar {
     height: 75px;
     position: fixed;
     top: -100px;
     width: 100%;
     transition: top 0.3s;
-} */
+}
 
 .nav-list li {
     list-style: none;
@@ -395,6 +394,10 @@ nav ul li a {
     background-attachment: fixed;
 }
 
+.overlay {
+    background-color: #00000038;
+}
+
 #hero .hero-content {
     align-items: flex-start;
     height: 100vh;
@@ -431,9 +434,14 @@ nav ul li a {
 }
 
 .hero-content .list-social li i {
-    color: #fff;
+    color: #ffffffb1;
     margin: 10px;
     font-size: 35px;
+}
+
+.hero-content .list-social li i:hover {
+    color: #ffffff;
+    transition: 0.5s;
 }
 
 .getintouch {
