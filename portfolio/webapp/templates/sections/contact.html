@@ -11,15 +11,39 @@
             {% endfor %}
         </div>
         <div class="container">
-            <div class="container bg-light shadow-medium p-3 form-layout">
+            <div class="p-3 form-layout">
                 <form action="" method="POST" autocomplete="off">
                     {% csrf_token %}
                     {{contact_form|crispy}}
-                    <button type="submit" class="btn btn-primary w-100 btn-block">
-                        Submit
-                    </button>
+                    <button id="submit" class="msg-btn btn" type="submit">SEND</button>
                 </form>
             </div>
         </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h1 class="text-center mt-5">GET IN TOUCH</h1>
+    <div class="contact-section">
+        <div class="left-contact">
+            {% for detail in contact_section_details %}
+            <div class="container d-flex align-items-baseline">
+                <i class="{{detail.info_icon}}" style="color: rgb(184, 141, 48);"></i>
+                <p class="m-2">{{detail.description}}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="right-contact p-3 form-layout">
+            <form action="" method="POST" autocomplete="off">
+                {% csrf_token %}
+                {{contact_form|crispy}}
+                <div class="text-center">
+                    <button id="submit" class="msg-btn btn" type="submit">SEND</button>
+                </div>
+
+            </form>
+        </div>
+
     </div>
 </section>
